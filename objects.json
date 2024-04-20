@@ -1,0 +1,42 @@
+{
+    "comets": [
+        {
+            "name" : "12P/Pons-Brooks",
+            "db_info" : "12P/Pons-Brooks,e,74.1916,255.8559,198.9889,17.20583,0.0138099,0.95462126,359.8878,04/13.0/2024,2000,g  5.0,6.0",
+            "element_source" : "https://minorplanetcenter.net/iau/Ephemerides/Comets/Soft03Cmt.txt",
+            "display" : true
+        }
+    ],
+    "satellites" : [
+        {
+            "name" : "International Space Station",             
+            "tle_line1" : "1 25544U 98067A   24104.51883789  .00014574  00000+0  26142-3 0  9998",
+            "tle_line2" : "2 25544  51.6398 276.0478 0004666  66.3077  33.1923 15.50152987448515",
+            "display" : true
+        }
+    ],
+    "cities" : [
+        {
+            "name" : "Nashville",
+            "latitude" : 36.174465,
+            "longitude" : -86.767960,
+            "elevation" : 117,
+            "country" : "Tennessee, USA"
+        },
+        {
+            "name" : "Los Gatos",
+            "latitude" : 37.2276,
+            "longitude" : -121.99,
+            "elevation" : 400,
+            "country" : "California, USA"
+        },
+        {
+            "name" : "Manaus",
+            "latitude" : "-3.12854",
+            "longitude" : "-60.00018",
+            "elevation" : 41.4,
+            "country" : "Amazonas, Brazil"
+        }
+    ],
+    "default_city" : "Los Gatos"
+}
