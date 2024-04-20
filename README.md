@@ -13,7 +13,7 @@ By default it will show you visibilty information at the current local time (bas
 Either or both of these aspects can be configured using command-line options as follows:
 
 ```
-ephemeris.py [--city 'city'] [--date 'YYYY/MM/DD HH:MM']
+% python3 ephemeris.py [--city 'city'] [--date 'YYYY/MM/DD HH:MM']
 ```
 
 ## Sample Output
@@ -75,9 +75,9 @@ International Space Station visibility -- Next Pass
 
 ## Configuration
 
-Several aspects of ephemeris calculation can be customized or extended through additional information provided in a file "objects.json", which will be read by Personal Ephemeris at runtime.  An example version of this file is included here.  It contains:
-* Comets of interest, which are specified using orbital elements formatted as used by the Minor Planet Center at http://www.minorplanetcenter.net/iau/Ephemerides/Soft03.html.  Because comet tracking can vary from time to time during their orbits, a 'display' attribute can be true or false to specify whether to show visibility information in the generated output.
-* The next visible pass for Earth-orbiting satellites of interest, based on orbital elements in the "TLE" (Two-line Element) format.  A good source of satellite elements in TLE is [CelesTrak](http://celestrak.org/NORAD/elements/), which compiles and published data from NORAD.  The International Space Station is a great example of a satellite it can be interesting to track.  Output of satellite visibilty information is configurable using a 'display' attribute as well.
+Several aspects of ephemeris calculation can be customized or extended through additional information provided in a file `objects.json`, which will be read by Personal Ephemeris at runtime.  An example version of this file is included here.  It contains:
+* Comets of interest, which are specified using orbital elements formatted as used by the [IAU Minor Planet Center](https://www.minorplanetcenter.net/) at http://www.minorplanetcenter.net/iau/Ephemerides/Soft03.html.  Because comet tracking can vary from time to time during their orbits, a `display` attribute can be true or false to specify whether to show visibility information in the generated output.
+* The next visible pass for Earth-orbiting satellites of interest, based on orbital elements in the "TLE" (Two-line Element) format.  A good source of satellite elements in TLE is [CelesTrak](http://celestrak.org/NORAD/elements/), which compiles and published data from NORAD.  The International Space Station is a great example of a satellite it can be interesting to track.  Output of satellite visibilty information is configurable using a `display` attribute as well.
 * Cities to use in calculating visibility information. PyEphem contains a database of over 100 cities worldwide, which may meet your needs but if not it supports extending that set through additional cities defined in the application.  To add a custom city for use with Personal Ephemeris you need to know its longitude and latitude in decimal degrees and its elevation above sea level in meters.  (Country information is included to help disambiguate cities with similar names but isn't used by Personal Ephemeris.)
 
 The object configuration file also lets you specify the default city to be used in calculating ephemerides, simplifying use.
