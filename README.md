@@ -1,8 +1,8 @@
-# Personal Ephemeris - Observing the Sun, Moon and Planets
+# Personal Ephemeris - Observing the Sun, Moon and Planets (and More!)
 
 As an amateur astronomer I like knowing what's going on in the night sky.  There are a number of web sites that will tell you bits and pieces of what I'd like to know, and an assortment of applications for mobile phones and tables that attempt to do so as well.  None of them was exactly what I was looking for, so I decided to write my own in Python.
 
-Happily I discovered the excellent [PyEphem package](http://rodesmill.org/pyephem), which provides Python classes and functions atop the excellent [XEphem](http://www.clearskyinstitute.com/xephem) library by Elwood Downey.
+Happily I discovered the excellent [PyEphem package](https://rodesmill.org/pyephem), which provides Python classes and functions atop the excellent [XEphem](https://www.clearskyinstitute.com/xephem) library by Elwood Downey.
 
 ## Usage 
 
@@ -18,55 +18,60 @@ ephemeris.py [--city 'city'] [--date 'YYYY/MM/DD HH:MM']
 
 ## Sample Output
 
-    ***** Currently at Los Gatos (03/09/2013 17:48:48) *****
-    
-    *** Sun and Moon ***
-           BODY        | VIS |   ALT  |   AZ   |    RISE     |     SET     |  MAG  |
-    -------------------+-----+--------+--------+-------------+-------------+-------+
-    Sun............... | Yes |   3:34 | 262:16 | 03/09 06:27 | 03/09 18:10 | -26.8 |
-    Moon.............. | No  |   ---  |   ---  | 03/10 06:28 | 03/10 18:25 |  ---  |
-    -------------------+-----+--------+--------+-------------+-------------+-------+
-    
-    *** Lunar Phase information: ***
-    Current lunar illumination is 3.9%, lunation is 0.9407
-    Was just Last Quarter at 03/04/2013 21:52:48.4 UT
-    New Moon     : 03/11/2013 19:51:00.1 UT (03/11/2013 12:51:00 Local time)
-    First Quarter: 03/19/2013 17:26:34.4 UT (03/19/2013 10:26:34 Local time)
-    Full Moon    : 03/27/2013 09:27:18.2 UT (03/27/2013 02:27:18 Local time)
-    Last Quarter : 04/03/2013 04:36:33.7 UT (04/02/2013 21:36:33 Local time)
-    
-    *** Planets ***
-           BODY        | VIS |   ALT  |   AZ   |    RISE     |     SET     |  MAG  |
-    -------------------+-----+--------+--------+-------------+-------------+-------+
-    Mercury........... | No  |   ---  |   ---  | 03/10 06:45 | 03/10 18:11 |  ---  |
-    Venus............. | No  |   ---  |   ---  | 03/10 07:22 | 03/10 18:45 |  ---  |
-    Mars.............. | Yes |  11:35 | 259:17 | 03/09 06:53 | 03/09 18:49 |   1.2 |
-    Jupiter........... | Yes |  73:14 | 199:53 | 03/09 10:13 | 03/10 00:35 |  -2.1 |
-    Saturn............ | No  |   ---  |   ---  | 03/09 22:10 | 03/10 09:55 |  ---  |
-    Uranus............ | Yes |  20:23 | 256:52 | 03/09 07:16 | 03/09 19:34 |   5.9 |
-    Neptune........... | No  |   ---  |   ---  | 03/10 06:47 | 03/10 17:44 |  ---  |
-    Pluto............. | No  |   ---  |   ---  | 03/10 03:42 | 03/10 13:41 |  ---  |
-    -------------------+-----+--------+--------+-------------+-------------+-------+
-    
-    *** Close Approaches (may not be visible) ***
-    Sun     to Mercury =  11:20 (dd:mm)
-    Sun     to Venus   =   4:21 (dd:mm)
-    Sun     to Mars    =   8:33 (dd:mm)
-    Moon    to Mercury =  12:29 (dd:mm)
-    Moon    to Neptune =   8:46 (dd:mm)
-    Mercury to Venus   =   7:60 (dd:mm)
-    Mercury to Neptune =   6:30 (dd:mm)
-    Venus   to Mars    =  12:41 (dd:mm)
-    Venus   to Neptune =  12:15 (dd:mm)
-    Mars    to Uranus  =   9:06 (dd:mm)
-    
-    *** Special Objects ***
-           BODY        | VIS |   ALT  |   AZ   |    RISE     |     SET     |  MAG  |
-    -------------------+-----+--------+--------+-------------+-------------+-------+
-    C/Pan-STARRS...... | Yes |  14:30 | 251:41 | 03/09 07:36 | 03/09 19:06 |   0.5 |
-    C/ISON............ | Yes |  65:56 |  95:48 | 03/09 11:49 | 03/10 04:33 |  15.6 |
-    -------------------+-----+--------+--------+-------------+-------------+-------+
-    
+```
+***** Currently at Los Gatos (04/20/2024 14:16:14) *****
+
+*** Sun and Moon ***
+       BODY        | VIS |   ALT  |   AZ   |    RISE     |     SET     |  MAG  |   RA   |   DEC  |
+-------------------+-----+--------+--------+-------------+-------------+-------+--------+--------+
+Sun................| Yes |  60:17 | 216:08 | 04/20 06:25 | 04/20 19:48 | -26.8 |  1h57m |  11:55 |
+Moon...............| No  |   ---  |   ---  | 04/20 17:00 | 04/21 05:23 |  ---  |  ----  |  ----  |
+-------------------+-----+--------+--------+-------------+-------------+-------+--------+--------+
+
+*** Lunar Phase information: ***
+Current lunar illumination is 91.4%, lunation is 0.4126
+Was just First Quarter at 04/15/2024 19:13:03.0 UT
+New Moon     : 05/08/2024 03:21:53.0 UT (05/07/2024 20:21:52 Local time)
+First Quarter: 05/15/2024 11:47:55.2 UT (05/15/2024 04:47:55 Local time)
+Full Moon    : 04/23/2024 23:48:55.9 UT (04/23/2024 16:48:55 Local time)
+Last Quarter : 05/01/2024 11:27:12.0 UT (05/01/2024 04:27:12 Local time)
+
+*** Planets ***
+       BODY        | VIS |   ALT  |   AZ   |    RISE     |     SET     |  MAG  |   RA   |   DEC  |
+-------------------+-----+--------+--------+-------------+-------------+-------+--------+--------+
+Mercury............| Yes |  48:22 | 230:09 | 04/20 05:51 | 04/20 18:34 |   2.6 |  1h2m |   6:29 |
+Venus..............| Yes |  49:53 | 226:31 | 04/20 06:02 | 04/20 18:46 |  -3.8 |  1h14m |   6:17 |
+Mars...............| Yes |  25:48 | 242:06 | 04/20 04:55 | 04/20 16:34 |   1.1 | 23h34m |  -4:-8 |
+Jupiter............| Yes |  70:03 | 171:25 | 04/20 07:31 | 04/20 21:25 |  -1.9 |  3h18m |  17:28 |
+Saturn.............| Yes |  19:21 | 244:19 | 04/20 04:41 | 04/20 16:00 |   1.2 | 23h10m |  -7:-12 |
+Uranus.............| Yes |  70:34 | 171:31 | 04/20 07:29 | 04/20 21:26 |   5.8 |  3h18m |  17:58 |
+Neptune............| Yes |  31:29 | 239:28 | 04/20 05:10 | 04/20 17:04 |   8.0 | 23h57m |  -1:-40 |
+Pluto..............| No  |   ---  |   ---  | 04/21 02:39 | 04/21 12:16 |  ---  |  ----  |  ----  |
+-------------------+-----+--------+--------+-------------+-------------+-------+--------+--------+
+
+*** Close Approaches (may not be visible) ***
+Sun     to Mercury =  14:23 (dd:mm)
+Sun     to Venus   =  11:57 (dd:mm)
+Mercury to Venus   =   2:49 (dd:mm)
+Mars    to Saturn  =   6:45 (dd:mm)
+Mars    to Neptune =   6:09 (dd:mm)
+Jupiter to Uranus  =   0:31 (dd:mm)
+Jupiter to M45     =   9:44 (dd:mm)
+Saturn  to Neptune =  12:54 (dd:mm)
+Uranus  to M45     =   9:27 (dd:mm)
+
+*** Special Objects ***
+      COMET        | VIS |   ALT  |   AZ   |    RISE     |     SET     |  MAG  |   RA   |   DEC  |
+-------------------+-----+--------+--------+-------------+-------------+-------+--------+--------+
+12P/Pons-Brooks....| Yes |  62:24 | 167:59 | 04/20 08:04 | 04/20 21:11 |   4.4 |  3h29m |  10:05 |
+-------------------+-----+--------+--------+-------------+-------------+-------+--------+--------+
+
+International Space Station visibility -- Next Pass
+   RISE @        AZ      MAX ALT @      AZ        SET @        AZ
+-------------+--------+-------------+--------+-------------+--------+
+ 04/21 10:24 | 160:57 | 04/21 10:28 |   4:09 | 04/21 10:31 |  85:31 |
+-------------+--------+-------------+--------+-------------+--------+
+```
 
 ## Configuration
 
