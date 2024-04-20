@@ -2,7 +2,7 @@
 
 As an amateur astronomer I like knowing what's going on in the night sky.  There are a number of web sites that will tell you bits and pieces of what I'd like to know, and an assortment of applications for mobile phones and tables that attempt to do so as well.  None of them was exactly what I was looking for, so I decided to write my own in Python.
 
-Happily I discovered the excellent [PyEphem package](https://rhodesmill.org/pyephem/index.html, which provides Python classes and functions atop the excellent [XEphem](https://www.clearskyinstitute.com/xephem) library by Elwood Downey.
+Happily I discovered the excellent [PyEphem package](https://rhodesmill.org/pyephem/index.html), which provides Python classes and functions atop the excellent [XEphem](https://www.clearskyinstitute.com/xephem) library by Elwood Downey.
 
 ## Usage 
 
